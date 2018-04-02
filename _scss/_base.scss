@@ -1,0 +1,25 @@
+// Base
+
+html {
+    color: $colour-base;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
+    color: $colour-heading;
+}
+
+a {
+    transition: color 0.2s ease-out;
+    color: $link-colour;
+    text-decoration: none;
+
+    &:hover {
+        color: $link-colour-hover;
+        text-decoration: underline;
+    }
+}

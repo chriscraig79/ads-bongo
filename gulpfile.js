@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
-const cssFiles = '_css/**/*.?(s)css';
+const cssFiles = '_scss/*';
 const child = require('child_process');
 const gutil = require('gulp-util');
 const browserSync = require('browser-sync').create();
@@ -39,7 +39,7 @@ gulp.task('serve', () => {
       baseDir: siteRoot
     }
   });
-  gulp.watch(cssFiles, ['css']);
+  gulp.watch(cssFiles, ['_scss']);
 });
 
 

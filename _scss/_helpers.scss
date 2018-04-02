@@ -1,0 +1,55 @@
+// Helpers
+.is-hidden {
+    display: none;
+}
+
+.text-sub {
+    font-size: $font-size-sub
+}
+
+.has-dropdown {
+    border-radius: 4px;
+    background-color: $form-input-bg;
+
+    select::-ms-expand,
+    option::-ms-expand  {
+        display: none;
+    }
+
+    select {
+        background-color: transparent;
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+}
+
+.has-arrow {
+    position: relative;
+
+    &:before {
+        content:'';
+        position: absolute;
+        top: ($base-line-height + $dropdown-arrow-size) / 4;
+        right: $base-font-size;
+        display: inline-block;
+        border-top: 1px solid $colour-base;
+    	border-left: 1px solid $colour-base;
+        width: $dropdown-arrow-size;
+        height: $dropdown-arrow-size;
+    }
+
+    &.-down {
+
+        &:before {
+            transform: rotate(225deg);
+        }
+    }
+
+}

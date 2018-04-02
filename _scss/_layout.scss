@@ -1,0 +1,110 @@
+// layout
+.wrapper {
+    padding: 0 20px;
+
+    @include media(">tablet") {
+        max-width: 944px;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    text-align: center;
+
+    @include media(">tablet") {
+        padding: 0;
+    }
+
+    .wrapper {
+
+        @include media(">tablet") {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    h1 {
+        letter-spacing: 2px;
+        font-weight: 400;
+        margin: 0 0 30px;
+
+        @include media(">tablet") {
+            flex-grow: 1;
+            text-align: left;
+            margin: 0;
+        }
+
+    }
+
+    .btn {
+        display: inline-block;
+    }
+
+}
+
+.logo-wrapper {
+
+    .logo {
+        max-width: 100px;
+        max-height: 100px;
+        margin: 30px 0 20px 0;
+
+        @include media(">tablet") {
+            max-width: 80px;
+            max-height: 80px;
+            margin: 30px 15px 10px 0;
+        }
+    }
+
+}
+
+.main {
+    @include media("<tablet") {
+        margin-bottom: 1rem;
+
+    }
+}
+
+.is-bg-jumbo {
+
+    @include media(">tablet") {
+        background: url(../img/bg.jpg) top center no-repeat;
+        background-size: cover;
+        padding: 100px 0 140px;
+    }
+}
+
+.is-bg-sm {
+    background-image: url(../img/bg_mob.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100%;
+
+    @include media(">tablet") {
+        display: none;
+    }
+}
+
+.footer {
+
+    &__links {
+        margin: 0;
+        padding: 30px;
+        list-style: none;
+        text-align: center;
+
+        li {
+
+            @include media(">tablet") {
+                display: inline-block;
+            }
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px;
+            color: $colour-base;
+        }
+    }
+}
