@@ -6,11 +6,22 @@ const child = require('child_process');
 const gutil = require('gulp-util');
 const browserSync = require('browser-sync').create();
 const siteRoot = '_site';
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('css', () => {
+    var plugins = [
+        autoprefixer({browsers: ['last 1 version']}),
+        cssnano()
+    ];
   gulp.src(cssFiles)
-    .pipe(sass())
-    .pipe(concat('all.css'))
+    .pipe(sourcemaps.init())
+      .pipe(sass())
+      .pipe(postcss(plugins))
+      .pipe(concat('all.css'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets'))
 });
 
@@ -39,7 +50,7 @@ gulp.task('serve', () => {
       baseDir: siteRoot
     }
   });
-  gulp.watch(cssFiles, ['_scss']);
+  gulp.watch(cssFiles, ['css']);
 });
 
 

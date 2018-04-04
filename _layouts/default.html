@@ -4,9 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>{{ page.title }}</title>
-        <meta name="description" content="">
+        <meta name="description" content="{{ site.description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <!-- <link rel="manifest" href="site.webmanifest"> -->
         <!-- <link rel="apple-touch-icon" href="icon.png"> -->
         <!-- Place favicon.ico in the root directory -->
@@ -20,7 +19,7 @@
         <![endif]-->
 
         {% include header.html %}
-        {{ page.content }}
+        {{ page.content | markdownify }}
         {% include footer.html %}
         {% include scripts.html %}
 

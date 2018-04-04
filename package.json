@@ -3,15 +3,11 @@
   "version": "1.0.0",
   "description": "A simple website for ADS automotive",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chriscraig79/ads-bongo.git"
   },
   "author": "Chris Craig",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/chriscraig79/ads-bongo/issues"
   },
@@ -19,8 +15,12 @@
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-util": "^3.0.8",
     "jekyll": "^3.0.0-beta1"
   }

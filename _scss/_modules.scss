@@ -35,22 +35,6 @@
     }
 }
 
-.form-wrapper {
-    max-width: $sign-up-width;
-    margin: 0 auto;
-
-    @include media(">tablet") {
-        max-width: $sign-up-width-tablet;
-        margin: 0;
-        padding: 30px;
-        background-color: rgba(255,255,255,.9);
-        -webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;
-    }
-
-    .intro {
-        margin:0 0 1rem;
-    }
-}
 
 .form {
 
@@ -106,70 +90,6 @@
 
         p {
             margin: 0;
-        }
-    }
-}
-
-.criteria {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    &__indicator {
-        display: none;
-        position: relative;
-        margin-left: 5px;
-
-
-        &:after {
-            content:'';
-            display: inline-block;
-            border-top: 1px solid $colour-base;
-            border-left: 1px solid $colour-base;
-            width: $font-size-sub / 2;
-            height: $font-size-sub;
-            transform: rotate(225deg);
-
-            .is-completed & {
-                border-color: $colour-success;
-            }
-        }
-
-        .is-completed & {
-            display: inline-block;
-        }
-    }
-
-    .form__field & {
-        margin-top: -15px;
-    }
-}
-
-.msg-error {
-    display: none;
-    color: $colour-error;
-    font-size: $font-size-sub;
-
-    .error & {
-        display: block;
-    }
-}
-
-#msg-generic-error {
-    display: none;
-    margin: 0 0 15px;
-    padding: 5px 10px;
-    background: #FED6CC;
-    color: #FE451B;
-    border-radius: 4px;
-    border: 1px solid rgb(255,0,0);
-
-    a {
-        color: rgb(255,0,0);
-
-        &:hover,
-        &:focus {
-            text-decoration: none;
         }
     }
 }

@@ -3,9 +3,14 @@
     display: none;
 }
 
-.text-sub {
-    font-size: $font-size-sub
+.flex {
+    display: flex;
 }
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
 
 .has-dropdown {
     border-radius: 4px;
@@ -27,7 +32,6 @@
             background-color: transparent;
         }
     }
-
 }
 
 .has-arrow {
@@ -51,5 +55,4 @@
             transform: rotate(225deg);
         }
     }
-
 }

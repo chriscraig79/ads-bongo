@@ -1,5 +1,5 @@
 // layout
-.wrapper {
+.container {
     padding: 0 20px;
 
     @include media(">tablet") {
@@ -9,59 +9,28 @@
 }
 
 .header {
-    text-align: center;
-
-    @include media(">tablet") {
-        padding: 0;
-    }
-
-    .wrapper {
-
-        @include media(">tablet") {
-            display: flex;
-            align-items: center;
-        }
-    }
-
-    h1 {
-        letter-spacing: 2px;
-        font-weight: 400;
-        margin: 0 0 30px;
-
-        @include media(">tablet") {
-            flex-grow: 1;
-            text-align: left;
-            margin: 0;
-        }
-
-    }
-
-    .btn {
-        display: inline-block;
-    }
-
+    padding: 20px 0;
+    background-color: $brand-dark;
 }
 
-.logo-wrapper {
 
-    .logo {
-        max-width: 100px;
-        max-height: 100px;
-        margin: 30px 0 20px 0;
+.logo {
 
-        @include media(">tablet") {
-            max-width: 80px;
-            max-height: 80px;
-            margin: 30px 15px 10px 0;
-        }
+    &__title {
+        margin: 0;
+        font-size: $base-font-size;
+        line-height: 1;
+        color: #e61610
     }
 
+    &__sub {
+        font-style: italic;
+    }
 }
 
 .main {
     @include media("<tablet") {
         margin-bottom: 1rem;
-
     }
 }
 
@@ -87,24 +56,10 @@
 }
 
 .footer {
-
-    &__links {
-        margin: 0;
-        padding: 30px;
-        list-style: none;
-        text-align: center;
-
-        li {
-
-            @include media(">tablet") {
-                display: inline-block;
-            }
-        }
-
-        a {
-            display: inline-block;
-            padding: 10px;
-            color: $colour-base;
-        }
-    }
+    padding-top: 1.33rem;
+    padding-bottom: 1.33rem;
+    background-color: $brand-dark;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    color: #AAA;
 }
