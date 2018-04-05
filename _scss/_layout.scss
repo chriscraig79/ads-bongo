@@ -1,6 +1,6 @@
 // layout
 .container {
-    padding: 0 1.33333rem;
+    padding: 0 1.33rem;
 
     @include media(">tablet") {
         max-width: $container-max-width;
@@ -8,14 +8,18 @@
     }
 }
 
-.header {
-    padding: 20px 0;
-    background-color: $colour-dark;
-    border-bottom: 2px solid $colour-highlight;
+header {
+    position: fixed;
+    width: 100%;
 }
 
-.footer {
-    padding-top: 1.33333rem;
-    padding-bottom: 1.33333rem;
-    background-color: $colour-dark;
+footer {
+
+    .logo {
+        display: inline-block;
+    }
+}
+
+section {
+    border-top: 1px solid $border-color;
 }

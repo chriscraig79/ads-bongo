@@ -9,7 +9,7 @@
         <!-- <link rel="manifest" href="site.webmanifest"> -->
         <!-- <link rel="apple-touch-icon" href="icon.png"> -->
         <!-- Place favicon.ico in the root directory -->
-        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400|Oxygen:400" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400|Oxygen:300" rel="stylesheet" type="text/css">
 
         <link rel="stylesheet" href="assets/all.css">
     </head>
@@ -19,7 +19,7 @@
         <![endif]-->
 
         {% include header.html %}
-        {{ page.content | markdownify }}
+        {{ page.content }}
         {% include footer.html %}
         {% include scripts.html %}
 

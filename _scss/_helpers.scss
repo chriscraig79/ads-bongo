@@ -1,8 +1,4 @@
-// Helpers
-.is-hidden {
-    display: none;
-}
-
+// layout
 .flex {
     display: flex;
 }
@@ -11,7 +7,56 @@
     justify-content: space-between;
 }
 
+// spacing/positioning
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.clear-head {
+    padding-top: 67px;
+    border-top: 0;
+}
+
+.snug-top {
+    margin-top: -24px;
+}
+
+
+// Typogrpahy
+.text-sm {
+    font-size: $font-size-sm;
+    line-height: 1.3;
+}
+
+.text-light {
+    color: $color-gray;
+}
+
+.text-star {
+ color: $colour-star;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+// Theming
+.brand {
+    background-color: $colour-dark;
+    border-bottom: 2px solid $colour-highlight;
+}
+
+// Utilities
 .has-dropdown {
     border-radius: 4px;
     background-color: $form-input-bg;
@@ -71,13 +116,4 @@
         }
     }
 
-}
-
-.my-1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.vertical-align-middle {
-    vertical-align: middle;
 }

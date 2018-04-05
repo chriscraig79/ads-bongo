@@ -10,8 +10,18 @@ html {
 }
 
 h1, h2, h3, h4, h4, h5, h6 {
+    font-family: $heading-font-family;
+    line-height: $base-line-height;
     color: $colour-heading;
+    font-weight: 300;
 }
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }
 
 a {
     transition: color 0.2s ease-out;
@@ -22,10 +32,4 @@ a {
         color: $link-colour-hover;
         text-decoration: underline;
     }
-}
-
-hr {
-    border: 0;
-    border-top: 2px solid $colour-highlight;
-    margin: 0.8rem 0;
 }

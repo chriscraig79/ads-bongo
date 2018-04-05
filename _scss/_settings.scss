@@ -15,14 +15,15 @@ $base-unit: 'rem';
 
 // The default font family.
 $base-font-family: "Open Sans", sans-serif;
+$heading-font-family: "Oxygen", sans-serif;
 
 // The font sizes for h1-h6.
-$h1-font-size: 2.33 * $base-font-size;
-$h2-font-size: 1.5  * $base-font-size;
-$h3-font-size: 1.1 * $base-font-size;
-$h4-font-size: 1    * $base-font-size;
-$h5-font-size: 0.8 * $base-font-size; // @15px * 0.8 = 12px
-$h6-font-size: 0.67 * $base-font-size; // @15px * 0.67 = 10px
+$h1-font-size: 1.46 * $base-font-size; // 22px
+$h2-font-size: 1.33 * $base-font-size; // 20px
+$h3-font-size: 1.2  * $base-font-size; // 18px
+$h4-font-size: 1    * $base-font-size; // 15px
+$h5-font-size: 0.8  * $base-font-size; // 12px
+$h6-font-size: 0.67 * $base-font-size; // 10px
 
 // The amount lists and blockquotes are indented.
 $indent-amount: 40px;
@@ -32,7 +33,7 @@ $indent-amount: 40px;
 // vertical rhythm on the page, which differs from the original Normalize.css.
 // However, changing any of the variables above will cause
 // $normalize-vertical-rhythm to be automatically set to true.
-$normalize-vertical-rhythm: false;
+$normalize-vertical-rhythm: true;
 
 // XXX Site vars
 $container-max-width: 944px;
@@ -41,17 +42,20 @@ $colour-primary: #0c59cf;
 $colour-highlight: #e61610;
 $colour-dark: #232323;
 $color-gray: #aaa;
+$colour-star: #EB6E00;
 
-$colour-base: #444;
+$colour-base: #555;
 $colour-heading: $colour-base;
 $colour-error: rgb(255,0,0);
 $colour-success: #6C0;
 
-$font-size-xs: 0.666 * $base-font-size; // @15px * 0.66 = 10px
+$font-size-xs: 0.67 * $base-font-size; // @15px * 0.67 = 10px
 $font-size-sm: 0.8 * $base-font-size; // @15px * 0.8 = 12px
 
 $link-colour: $colour-primary;
 $link-colour-hover: $colour-primary;
+
+$border-color: #eee;
 
 $btn-bg: $colour-dark;
 $btn-bg-hover: transparent;
@@ -60,7 +64,7 @@ $btn-colour-hover: $btn-colour;
 $btn-border: transparent;
 $btn-border-hover: $btn-border;
 
-$btn-bg-light: #eee;
+$btn-bg-light: $border-color;
 $btn-bg-light-hover: $btn-bg-light;
 $btn-colour-light: $colour-base;
 $btn-colour-light-hover: $colour-base;
