@@ -4,7 +4,7 @@
     &__title {
         margin: 0;
         font-size: $base-font-size;
-        line-height: 1;
+        line-height: 1.3;
 
         a {
             color: $colour-highlight;
@@ -13,6 +13,7 @@
 
     &__sub {
         font-size: $font-size-xs;
+        line-height: 1.6;
         color: $color-gray;
     }
 }
@@ -29,7 +30,7 @@
 
 .btn {
     transition: background-color 0.2s ease-out;
-    padding: 8px 20px;
+    padding: 4px 20px;
     border: 0;
     text-align: center;
     color: $btn-colour;
@@ -137,4 +138,10 @@
     font-size: $font-size-sm;
     line-height: 1.3;
     color: $color-gray;
+}
+
+.logo-fb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
