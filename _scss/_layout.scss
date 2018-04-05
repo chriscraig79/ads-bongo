@@ -1,65 +1,21 @@
 // layout
 .container {
-    padding: 0 20px;
+    padding: 0 1.33333rem;
 
     @include media(">tablet") {
-        max-width: 944px;
+        max-width: $container-max-width;
         margin: 0 auto;
     }
 }
 
 .header {
     padding: 20px 0;
-    background-color: $brand-dark;
-}
-
-
-.logo {
-
-    &__title {
-        margin: 0;
-        font-size: $base-font-size;
-        line-height: 1;
-        color: #e61610
-    }
-
-    &__sub {
-        font-style: italic;
-    }
-}
-
-.main {
-    @include media("<tablet") {
-        margin-bottom: 1rem;
-    }
-}
-
-.is-bg-jumbo {
-
-    @include media(">tablet") {
-        background: url(../img/bg.jpg) top center no-repeat;
-        background-size: cover;
-        padding: 100px 0 140px;
-    }
-}
-
-.is-bg-sm {
-    background-image: url(../img/bg_mob.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 100%;
-
-    @include media(">tablet") {
-        display: none;
-    }
+    background-color: $colour-dark;
+    border-bottom: 2px solid $colour-highlight;
 }
 
 .footer {
-    padding-top: 1.33rem;
-    padding-bottom: 1.33rem;
-    background-color: $brand-dark;
-    font-size: 0.8rem;
-    line-height: 1.3rem;
-    color: #AAA;
+    padding-top: 1.33333rem;
+    padding-bottom: 1.33333rem;
+    background-color: $colour-dark;
 }

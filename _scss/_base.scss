@@ -24,7 +24,8 @@ a {
     }
 }
 
-.hr {
+hr {
     border: 0;
-    border-top: 1px solid $brand-highlight;
+    border-top: 2px solid $colour-highlight;
+    margin: 0.8rem 0;
 }

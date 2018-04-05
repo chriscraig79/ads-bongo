@@ -7,7 +7,7 @@
 $base-font-size: 15px;
 
 // The base line height determines the basic unit of vertical rhythm.
-$base-line-height: 25px;
+$base-line-height: 1.6;
 
 // The length unit in which to output vertical rhythm values.
 // Supported values: px, em, rem.
@@ -35,33 +35,44 @@ $indent-amount: 40px;
 $normalize-vertical-rhythm: false;
 
 // XXX Site vars
-$brand-primary: #e61610;
-$brand-highlight: #e61610;
-$brand-dark: #232323;
+$container-max-width: 944px;
+
+$colour-primary: #049cdb;
+$colour-highlight: #e61610;
+$colour-dark: #232323;
+$color-gray: #aaa;
 
 $colour-base: #444;
 $colour-heading: $colour-base;
 $colour-error: rgb(255,0,0);
 $colour-success: #6C0;
 
-$font-size-sub: 0.8 * $base-font-size; // @15px * 0.8 = 12px
+$font-size-xs: 0.666 * $base-font-size; // @15px * 0.66 = 10px
+$font-size-sm: 0.8 * $base-font-size; // @15px * 0.8 = 12px
 
-$btn-bg: $brand-primary;
-$btn-bg-hover: $brand-dark;
+$link-colour: $colour-primary;
+$link-colour-hover: $colour-primary;
+
+$btn-bg: $colour-dark;
+$btn-bg-hover: transparent;
 $btn-colour: #FFF;
 $btn-colour-hover: $btn-colour;
 $btn-border: transparent;
 $btn-border-hover: $btn-border;
 
-$btn-bg-ghost: transparent;
-$btn-bg-ghost-hover: $brand-dark;
-$btn-colour-ghost: $brand-primary;
-$btn-colour-ghost-hover: #FFF;
-$btn-border-ghost: $brand-primary;
-$btn-border-ghost-hover: $brand-dark;
+$btn-bg-light: #eee;
+$btn-bg-light-hover: $btn-bg-light;
+$btn-colour-light: $colour-base;
+$btn-colour-light-hover: $colour-base;
+$btn-border-light: transparent;
+$btn-border-light-hover: transparent;
 
-$link-colour: $brand-highlight;
-$link-colour-hover: $brand-dark;
+$btn-bg-ghost: transparent;
+$btn-bg-ghost-hover: $colour-dark;
+$btn-colour-ghost: $colour-primary;
+$btn-colour-ghost-hover: #FFF;
+$btn-border-ghost: $colour-primary;
+$btn-border-ghost-hover: $colour-dark;
 
 $sign-up-width: 500px;
 $sign-up-width-tablet: 343px;
@@ -69,7 +80,7 @@ $sign-up-width-tablet: 343px;
 $form-input-bg: #FFF;
 $form-input-bg-focus: $form-input-bg;
 $form-input-border: #CCC;
-$form-input-border-focus: $brand-primary;
+$form-input-border-focus: $colour-primary;
 $form-input-placeholder-colour: $colour-base;
 
 
