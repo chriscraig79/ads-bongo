@@ -18,12 +18,9 @@ $base-font-family: "Open Sans", sans-serif;
 $heading-font-family: "Oxygen", sans-serif;
 
 // The font sizes for h1-h6.
-$h1-font-size: 1.46 * $base-font-size; // 22px
-$h2-font-size: 1.33 * $base-font-size; // 20px
-$h3-font-size: 1.2  * $base-font-size; // 18px
-$h4-font-size: 1    * $base-font-size; // 15px
-$h5-font-size: 0.8  * $base-font-size; // 12px
-$h6-font-size: 0.67 * $base-font-size; // 10px
+$h1-font-size: 2rem; // 30px
+$h1-font-size-tablet: 3rem; // 45px
+
 
 // The amount lists and blockquotes are indented.
 $indent-amount: 40px;

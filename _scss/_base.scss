@@ -15,14 +15,17 @@ h1, h2, h3, h4, h4, h5, h6 {
     font-weight: 400;
     line-height: $base-line-height;
     color: $colour-heading;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
 }
 
-h1 { font-size: $h1-font-size; }
-h2 { font-size: $h2-font-size; }
-h3 { font-size: $h3-font-size; }
-h4 { font-size: $h4-font-size; }
-h5 { font-size: $h5-font-size; }
-h6 { font-size: $h6-font-size; }
+h1 {
+    font-size: $h1-font-size;
+
+    @include media(">tablet") {
+        font-size: $h1-font-size-tablet;
+    }
+}
 
 b, strong {
     font-weight: 400;
@@ -37,4 +40,9 @@ a {
         color: $link-colour-hover;
         text-decoration: underline;
     }
+}
+
+section {
+    border-top: 1px solid $border-color;
+    padding-bottom: 1.6rem;
 }

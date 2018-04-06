@@ -13,6 +13,11 @@
     margin-bottom: 1rem;
 }
 
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .py-1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -25,6 +30,12 @@
 
 .snug-top {
     margin-top: -24px;
+}
+
+.w-70-tablet {
+    @include media(">tablet") {
+        max-width: 70%;
+    }
 }
 
 
