@@ -8,6 +8,10 @@
 }
 
 // spacing/positioning
+.m-0 {
+    margin: 0;
+}
+
 .my-1 {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -27,9 +31,9 @@
     margin-top: -24px;
 }
 
-.w-70-tablet {
+.w-75-tablet {
     @include media(">tablet") {
-        max-width: 70%;
+        max-width: 75%;
     }
 }
 
@@ -54,6 +58,10 @@
 
 .text-left {
     text-align: left;
+}
+
+.ani-fade {
+    animation: .5s .5s fade backwards ease-out;
 }
 
 // Theming
