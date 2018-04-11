@@ -11,6 +11,7 @@
 header {
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 
 
@@ -19,6 +20,34 @@ header {
     padding-top: 67px;
     padding-bottom: 0;
 
+}
+
+section {
+    border-top: 1px solid $border-color;
+    padding-bottom: 3.2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    @include media('>tablet') {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .card {
+        margin-bottom: 24px;
+
+        @include media('>tablet') {
+            min-width: 320px
+        }
+
+        // &:not(:last-child) {
+        // }
+    }
 }
 
 footer {
