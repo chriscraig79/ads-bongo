@@ -13,7 +13,7 @@ const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('css', () => {
     var plugins = [
-        autoprefixer({browsers: ['last 1 version']}),
+        autoprefixer({browsers: ['last 2 version']}),
         cssnano()
     ];
   gulp.src(cssFiles)
@@ -22,7 +22,7 @@ gulp.task('css', () => {
       .pipe(postcss(plugins))
       .pipe(concat('all.css'))
     .pipe(sourcemaps.write(''))
-    .pipe(gulp.dest('assets'))
+    .pipe(gulp.dest('_includes'))
 });
 
 gulp.task('jekyll', () => {
