@@ -21,7 +21,7 @@ gulp.task('css', () => {
       .pipe(sass())
       .pipe(postcss(plugins))
       .pipe(concat('all.css'))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write(''))
     .pipe(gulp.dest('assets'))
 });
 
