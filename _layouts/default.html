@@ -20,10 +20,12 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        {% include header.html %}
-        {{ page.content }}
-        {% include footer.html %}
-        {% include scripts.html %}
-
+        <div id="main">
+            {% include header.html %}
+            {{ page.content }}
+            {% include footer.html %}
+        </div>
+            {% include quote-form.html %}
+            {% include scripts.html %}
     </body>
 </html>

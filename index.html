@@ -4,6 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 title: Mazda Bongo Specialists
+form-email: chriscraig79@gmail.com
 ---
 <!-- Content -->
 <section class="clear-head">
@@ -36,7 +37,7 @@ title: Mazda Bongo Specialists
                 We also have a wide range of new and second hand Bongo parts available.
             </p>
             <p class="text-center">
-                <a href="#">
+                <a class="btn" href="#quote-form" rel="modal:open">
                     <b>Request a quote</b>
                 </a>
             </p>
@@ -194,5 +195,35 @@ title: Mazda Bongo Specialists
 
         </div>
 
+    </div>
+</section>
+
+<section class="bg-pale">
+    <div class="container text-center w-50-tablet">
+        <h2>Contact us</h2>
+        <p>
+            Please always feel free to give a call, we're open Monday to Friday
+            between 8am &amp; 5pm or drop us a line below.
+        </p>
+        <p>
+            <a href="tel:0117 635 999">0117 635 999</a>
+        </p>
+        <p>
+            <a href="mailto:info@bongospecialists.co.uk">info@bongospecialists.co.uk</a>
+        </p>
+
+        <form class="form" action="https://formspree.io/chriscraig79@gmail.com" method="POST">
+            <div class="form__field">
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="form__field">
+                <input type="text" name="email" placeholder="Email">
+            </div>
+            <div class="form__field">
+                <textarea name="message" rows="8" cols="80" placeholder="Message"></textarea>
+            </div>
+            <p class="text-sm text-light">We respect your privacy and will never share your details without your consent.</p>
+            <button class="btn" name="button" type="submit" value="Send">Submit</button>
+        </form>
     </div>
 </section>

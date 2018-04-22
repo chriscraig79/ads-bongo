@@ -37,6 +37,12 @@
     }
 }
 
+.w-50-tablet {
+    @include media(">tablet") {
+        max-width: 50%;
+    }
+}
+
 
 // Typogrpahy
 .text-sm {

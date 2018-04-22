@@ -24,14 +24,14 @@ $link-colour-hover: $colour-primary;
 $border-color: #eee;
 
 $btn-bg: $colour-dark;
-$btn-bg-hover: transparent;
+$btn-bg-hover: $color-gray;
 $btn-colour: #FFF;
 $btn-colour-hover: $btn-colour;
 $btn-border: transparent;
 $btn-border-hover: $btn-border;
 
 $btn-bg-light: $border-color;
-$btn-bg-light-hover: $btn-bg-light;
+$btn-bg-light-hover: $color-gray;
 $btn-colour-light: $colour-base;
 $btn-colour-light-hover: $colour-base;
 $btn-border-light: transparent;
@@ -51,6 +51,6 @@ $form-input-bg: #FFF;
 $form-input-bg-focus: $form-input-bg;
 $form-input-border: #CCC;
 $form-input-border-focus: $colour-primary;
-$form-input-placeholder-colour: $colour-base;
+$form-input-placeholder-colour: $color-gray;
 
 $dropdown-arrow-size: 12px;
