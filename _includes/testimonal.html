@@ -1,0 +1,12 @@
+{% for testimonal in include.testimonals %}
+<p>
+    <i>
+        "{{ testimonal.text }}"
+    </i>
+</p>
+<p class="snug-top">
+    <a href="{{ testimonal.link }}" target="_blank">
+        <b>{{ testimonal.name }}</b>
+    </a>
+    <p class="snug-top text-star">★★★★★</p>
+{% endfor %}

@@ -1,0 +1,9 @@
+{% for offer in include.offers %}
+<div class="card linky text-center">
+    <h1 class="card__title">{{ offer.title }}</h1>
+    <p class="card__sub">{{ offer.sub }}</p>
+    <br>
+    <a class="card__btn btn -ghost" href="{{ offer.link }}" rel="modal:open">{{ offer.button }}</a>
+    <p class="text-sm">{{ offer.button-sub }}</p>
+</div>
+{% endfor %}

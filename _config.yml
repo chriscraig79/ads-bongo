@@ -14,11 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Bongo Specialists
-email: info@adsautomotive.co.uk
+email: info@bongospecialists.co.uk
 description: >- # this means to ignore newlines until "baseurl:"
   Value and expertise for Mazda Bongo owners since 2003
 baseurl: "/ads-bongo" # the subpath of your site, e.g. /blog
 url: "https://chriscraig79.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+formspree: https://formspree.io/chriscraig79@gmail.com
+phone: 0117 635 999
 
 # Build settings
 # markdown: kramdown

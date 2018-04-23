@@ -13,15 +13,12 @@
         <link rel="stylesheet" href="assets/all.css">
     </head>
     <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
+        {% include upgrade.html %}
         <div id="main">
             {% include header.html %}
             {{ page.content }}
             {% include footer.html %}
         </div>
-            {% include scripts.html %}
+        {% include scripts.html %}
     </body>
 </html>
