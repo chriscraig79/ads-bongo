@@ -1,0 +1,27 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: modal
+title: Thank you
+id: quote-form
+---
+<h2>Request a quote</h2>
+<form class="form" action="https://formspree.io/chriscraig79@gmail.com" method="POST">
+    <div class="form__field">
+        <input type="text" name="name" placeholder="Name">
+    </div>
+    <div class="form__field">
+        <input type="email" name="_replyto" placeholder="Email">
+    </div>
+    <div class="form__field">
+        <textarea name="message" rows="8" cols="80" placeholder="Message"></textarea>
+    </div>
+    <div class="form__field text-center">
+        <p class="text-center text-sm">We respect your privacy and will never share your details without your consent.</p>
+        <button class="btn" type="submit" value="Send">Submit</button>
+    </div>
+    <input type="hidden" name="_next" value="thanks.html" />
+    <input type="hidden" name="_subject" value="New submission!" />
+    <input type="hidden" name="_cc" value="chriscraig79+test@gmail.com" />
+</form>

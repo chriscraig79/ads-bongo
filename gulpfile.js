@@ -22,7 +22,7 @@ gulp.task('css', () => {
       .pipe(postcss(plugins))
       .pipe(concat('all.css'))
     .pipe(sourcemaps.write(''))
-    .pipe(gulp.dest('_includes'))
+    .pipe(gulp.dest('assets'))
 });
 
 gulp.task('jekyll', () => {

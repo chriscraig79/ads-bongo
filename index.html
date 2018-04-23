@@ -4,7 +4,6 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 title: Mazda Bongo Specialists
-form-email: chriscraig79@gmail.com
 ---
 <!-- Content -->
 <section class="clear-head">
@@ -217,13 +216,16 @@ form-email: chriscraig79@gmail.com
                 <input type="text" name="name" placeholder="Name">
             </div>
             <div class="form__field">
-                <input type="text" name="email" placeholder="Email">
+                <input type="email" name="_replyto" placeholder="Email">
             </div>
             <div class="form__field">
                 <textarea name="message" rows="8" cols="80" placeholder="Message"></textarea>
             </div>
             <p class="text-sm text-light">We respect your privacy and will never share your details without your consent.</p>
-            <button class="btn" name="button" type="submit" value="Send">Submit</button>
+            <button class="btn" type="submit" value="Send">Submit</button>
+            <input type="hidden" name="_next" value="thanks.html" />
+            <input type="hidden" name="_subject" value="New submission!" />
+            <input type="hidden" name="_cc" value="chriscraig79+test@gmail.com" />
         </form>
     </div>
 </section>
