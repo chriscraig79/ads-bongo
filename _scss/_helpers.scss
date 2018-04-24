@@ -66,10 +66,6 @@
     text-align: left;
 }
 
-.ani-fade {
-    animation: .5s .5s fade backwards ease-out;
-}
-
 // Theming
 .brand {
     background-color: $colour-dark;
@@ -81,6 +77,11 @@
 }
 
 // Utilities
+
+.hidden {
+    display: none;
+}
+
 .has-dropdown {
     border-radius: 4px;
     background-color: $form-input-bg;

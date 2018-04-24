@@ -2,9 +2,16 @@
     <h2>{{ page.title }}</h2>
     {% include {{ page.form }} %}
 </div>
-
 <script type="text/javascript">
+
+var now = Date.now();
+
 $('[data-toggle="datepicker"]').datepicker({
-    format: 'dd-mm-yyyy'
+    format: 'dd-mm-yyyy',
+    language: 'en-GB',
+    inline: true,
+    container: '.datepicker-wrapper',
+    autoPick: true,
+    startDate: now
 });
 </script>
