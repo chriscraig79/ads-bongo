@@ -66,6 +66,11 @@
     text-align: left;
 }
 
+.help-block {
+    padding: 2px;
+    color: $colour-error;
+}
+
 // Theming
 .brand {
     background-color: $colour-dark;

@@ -33,7 +33,7 @@
     </div>
 </div>
 
-        <a class="btn -light" href="quote.html" rel="modal:open">Quote me</a>
+        <a class="btn -light" href="#quote-form" rel="modal:open">Quote me</a>
     </div>
 </header>
 
@@ -219,7 +219,7 @@
             </section>
 
             <section class="bg-pale">
-                <div class="container text-center w-50-tablet">
+                <div class="container text-center w-50-tablet has-form">
                     <h2>Contact us</h2>
                     <p>
                         Please always feel free to give a call, we're open Monday to Friday
@@ -240,15 +240,18 @@
     <div class="form__field">
     <input required type="text" name="name" placeholder="Name" value="">
 
+    <p class="help-block text-left text-sm m-0"></p>
 </div>
 
     <div class="form__field">
     <input required type="email" name="_replyto" placeholder="Email" value="">
 
+    <p class="help-block text-left text-sm m-0"></p>
 </div>
 
     <div class="form__field">
     <textarea required name="message" rows="4" cols="60" placeholder="Message"></textarea>
+    <p class="help-block text-left text-sm m-0"></p>
 </div>
 
     <div class="form__field text-center">
@@ -294,20 +297,95 @@
     </div>
 </section>
 
+            <div id="quote-form" class="modal has-form">
+    <h2>Request a quote</h2>
+    <form class="form" action="https://formspree.io/chriscraig79@gmail.com" method="POST">
+        <input  type="hidden" name="_next" placeholder="" value="thanks.html">
+
+        <input  type="hidden" name="_subject" placeholder="" value="New quote request">
+
+        <div class="form__field">
+    <input required type="text" name="name" placeholder="Name" value="">
+
+    <p class="help-block text-left text-sm m-0"></p>
+</div>
+
+        <div class="form__field">
+    <input required type="email" name="_replyto" placeholder="Email" value="">
+
+    <p class="help-block text-left text-sm m-0"></p>
+</div>
+
+        <div class="form__field">
+    <input  type="text" name="reg" placeholder="Car reg number" value="">
+
+    <p class="help-block text-left text-sm m-0"></p>
+</div>
+
+        <div class="form__field">
+    <textarea required name="message" rows="4" cols="60" placeholder="How can we help?"></textarea>
+    <p class="help-block text-left text-sm m-0"></p>
+</div>
+
+        <div class="form__field text-center">
+            <p class="text-center text-sm">We respect your privacy and will never share your details without your consent.</p>
+            <button class="btn" type="submit" value="Send">Submit</button>
+        </div>
+    </form>
+</div>
+
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+</script>
+<script src="js/vendor/jquery.modal.min.js"></script>
 <script src="js/vendor/datepicker.min.js"></script>
-<script src="https://fengyuanchen.github.io/js/common.js"></script>
+<script src="js/vendor/validator.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $.fn.validator.setDefaults({
+            trigger: 'input change',
+            success: function(e) {
+                console.log(e.type, e.value, e.rule);
+                $(this).closest('.form__field').removeClass('has-error').find('.help-block').empty();
+            },
+            error: function(e) {
+                console.log(e.type, e.value, e.rule);
+                $(this).closest('.form__field').addClass('has-error').find('.help-block').text(e.message);
+            }
+        });
 
-<!-- <script src="/js/vendor/modal-window.js"></script> -->
+        var $form = $('.has-form form');
+        var $inputs = $form.find('input');
+        var $textarea = $form.find('textarea');
+        var $submit = $form.find(':submit');
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        $inputs.validator();
+        $textarea.validator();
+
+        $submit.click(function(e) {
+            var validity = [];
+
+            $inputs.each(function() {
+                validity.push($(this).validator('isValid'));
+            });
+
+            $textarea.each(function() {
+                validity.push($(this).validator('isValid'));
+            });
+
+            if ($.inArray(false, validity) !== -1) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    });
+</script>
+
 <!-- <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-    ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    ga('create','UA-XXXX-Y','auto');ga('send','pageview')
 </script>
 <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
 

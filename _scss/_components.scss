@@ -169,12 +169,13 @@
             }
         }
 
-        // &.error {
-        //
-        //     input {
-        //         border-color: $colour-error;
-        //     }
-        // }
+        &.has-error {
+
+            input,
+            textarea {
+                border-color: $colour-error;
+            }
+        }
     }
 }
 

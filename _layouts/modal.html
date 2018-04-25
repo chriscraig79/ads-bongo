@@ -5,6 +5,9 @@
 <script type="text/javascript">
 
 var now = Date.now();
+var date = new Date();
+var currMonth = date.getMonth();
+var endDate = date.setMonth(currMonth + 2);
 
 $('[data-toggle="datepicker"]').datepicker({
     format: 'dd-mm-yyyy',
@@ -12,6 +15,7 @@ $('[data-toggle="datepicker"]').datepicker({
     inline: true,
     container: '.datepicker-wrapper',
     autoPick: true,
-    startDate: now
+    startDate: now,
+    endDate: new Date(endDate)
 });
 </script>

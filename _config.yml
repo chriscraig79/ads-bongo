@@ -21,6 +21,7 @@ baseurl: "/ads-bongo" # the subpath of your site, e.g. /blog
 url: "https://chriscraig79.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 formspree: https://formspree.io/chriscraig79@gmail.com
 phone: 0117 635 999
+ga: UA-XXXX-Y
 
 # Build settings
 # markdown: kramdown

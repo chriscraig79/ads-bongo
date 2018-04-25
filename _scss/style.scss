@@ -4,5 +4,6 @@
 @import "base";
 @import "layout";
 @import "components";
+@import "../node_modules/@fengyuanchen/datepicker/dist/datepicker";
+@import "../node_modules/jquery-modal/jquery-modal.css";
 @import "helpers";
-@import "../node_modules/@fengyuanchen/datepicker/dist/datepicker"
