@@ -2,12 +2,12 @@
     <h2>{{ page.title }}</h2>
     <form class="form" action="{{ site.formspree }}" method="POST">
         <div class="hidden">
-            {% include form-input.html type="hidden" name="_next" value="thanks.html" %}
-            {% include form-input.html type="hidden" name="_subject" value="Offer submission!" %}
+            {% include form-field-input.html type="hidden" name="_next" value="thanks.html" %}
+            {% include form-field-input.html type="hidden" name="_subject" value="Offer submission!" %}
         </div>
-        {% include form-input.html required="required" type="text" name="name" placeholder="Name" %}
-        {% include form-input.html required="required" type="email" name="_replyto" placeholder="Email" %}
-        {% include form-input.html type="text" name="reg" placeholder="Car reg number" %}
+        {% include form-field-input.html required="required" type="text" name="name" placeholder="Name" %}
+        {% include form-field-input.html required="required" type="email" name="_replyto" placeholder="Email" %}
+        {% include form-field-input.html type="text" name="reg" placeholder="Car reg number" %}
         <input class="hidden" data-toggle="datepicker" type="text" name="date" placeholder="Select a date">
         <div class="datepicker-wrapper mx-auto"></div>
         <div class="form__field text-center">

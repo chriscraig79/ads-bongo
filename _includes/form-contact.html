@@ -1,11 +1,11 @@
 <form class="form" action="{{ site.formspree }}" method="POST">
     <div class="hidden">
-        {% include form-input.html type="hidden" name="_next" value="thanks.html" %}
-        {% include form-input.html type="hidden" name="_subject" value="Contact submission!" %}
+        {% include form-field-input.html type="hidden" name="_next" value="thanks.html" %}
+        {% include form-field-input.html type="hidden" name="_subject" value="Contact submission!" %}
     </div>
-    {% include form-input.html required="required" type="text" name="name" placeholder="Name" %}
-    {% include form-input.html required="required" type="email" name="_replyto" placeholder="Email" %}
-    {% include form-textarea.html required="required" name="message" rows="4" cols="60" placeholder="Message" %}
+    {% include form-field-input.html required="required" type="text" name="name" placeholder="Name" %}
+    {% include form-field-input.html required="required" type="email" name="_replyto" placeholder="Email" %}
+    {% include form-field-textarea.html required="required" name="message" rows="4" cols="60" placeholder="Message" %}
     <div class="form__field text-center">
         <p class="text-center text-sm">We respect your privacy and will never share your details without your consent.</p>
         <button class="btn" type="submit" value="Send">Submit</button>

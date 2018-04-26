@@ -1,0 +1,9 @@
+{% for profile in include.profiles %}
+<div class="col">
+    <div class="profile">
+        <img class="profile__img" src="assets/{{ profile.img }}" alt="{{ profile.name }}" />
+        <h3 class="m-0">{{ profile.name }}</h3>
+        <p class="m-0 text-light">{{ profile.role }}</p>
+    </div>
+</div>
+{% endfor %}

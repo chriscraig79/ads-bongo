@@ -15,7 +15,7 @@
             </section>
             <section>
                 <div class="container">
-                    <h2 class="text-center">Services</h2>
+                    <h2 class="text-center">Our Services</h2>
                     <div class="w-70-tablet mx-auto">
                         {{ page.content }}
                     </div>
@@ -32,7 +32,7 @@
             </section>
             <section class="bg-pale">
                 <div class="container">
-                    <h2 class="text-center">Offers</h2>
+                    <h2 class="text-center">Special Offers</h2>
                     <div class="row">
                         {% include card.html offers=site.data.offers %}
                     </div>
@@ -47,56 +47,7 @@
                     </p>
 
                     <div class="grid -profile">
-                        <div class="col">
-                            <div class="profile">
-                                <img class="profile__img" src="assets/hero-bg.jpg" alt="Gary Owner" />
-                                <h3 class="m-0">Gary</h3>
-                                <p class="m-0 text-light">Owner</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="profile">
-                                <img class="profile__img" src="assets/hero-bg.jpg" alt="Gary Owner" />
-                                <h3 class="m-0">Gary</h3>
-                                <p class="m-0 text-light">Owner</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="profile">
-                                <img class="profile__img" src="assets/hero-bg.jpg" alt="Gary Owner" />
-                                <h3 class="m-0">Gary</h3>
-                                <p class="m-0 text-light">Owner</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="profile">
-                                <img class="profile__img" src="assets/hero-bg.jpg" alt="Gary Owner" />
-                                <h3 class="m-0">Gary</h3>
-                                <p class="m-0 text-light">Owner</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="profile">
-                                <img class="profile__img" src="assets/hero-bg.jpg" alt="Gary Owner" />
-                                <h3 class="m-0">Gary</h3>
-                                <p class="m-0 text-light">Owner</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="profile">
-                                <img class="profile__img" src="assets/hero-bg.jpg" alt="Gary Owner" />
-                                <h3 class="m-0">Gary</h3>
-                                <p class="m-0 text-light">Owner</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="profile">
-                                <img class="profile__img" src="assets/hero-bg.jpg" alt="Gary Owner" />
-                                <h3 class="m-0">Gary</h3>
-                                <p class="m-0 text-light">Owner</p>
-                            </div>
-                        </div>
-
+                        {% include profile.html profiles=site.data.profiles %}
                     </div>
 
                 </div>
@@ -122,7 +73,6 @@
             {% include footer.html %}
         </div>
         {% include form-quote.html %}
-        {% include form-offers.html offers=site.data.offers %}
         {% include scripts.html %}
     </body>
 </html>

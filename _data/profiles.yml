@@ -1,0 +1,19 @@
+- name: Gary
+  role: Owner
+  img: hero-bg.jpg
+
+- name: John
+  role: Mechanic
+  img: hero-bg.jpg
+
+- name: Bill
+  role: Mechanic
+  img: hero-bg.jpg
+
+- name: Bob
+  role: Mechanic
+  img: hero-bg.jpg
+
+- name: Dave
+  role: Mechanic
+  img: hero-bg.jpg
