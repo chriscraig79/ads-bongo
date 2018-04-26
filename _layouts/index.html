@@ -59,7 +59,7 @@
                 </div>
             </section>
             <section class="bg-pale">
-                <div class="container text-center w-50-tablet has-form">
+                <div class="container text-center w-50-tablet">
                     <h2>Contact us</h2>
                     <p>
                         {{ page.contactIntro }}
@@ -70,8 +70,9 @@
                     <p>
                         <a href="mailto:{{ site.email }}">{{ site.email }}</a>
                     </p>
-
-                    {% include {{ page.form }} %}
+                    <div id="contact-form" class="has-form">
+                        {% include {{ page.form }} %}
+                    </div>
                 </div>
             </section>
             {% include footer.html %}

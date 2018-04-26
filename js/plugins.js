@@ -58,20 +58,20 @@ $(function() {
         }
     });
 
-    var $form1 = $('#quote-form form');
-    var $inputs = $form1.find('input');
-    var $textarea = $form1.find('textarea');
-    var $submit = $form1.find('button');
+    // var $form1 = $('#quote-form form');
+    // var $inputs = $form1.find('input');
+    // var $textarea = $form1.find('textarea');
+    // var $submit = $form1.find('button');
 
     var $form2 = $('#contact-form form');
     var $inputs = $form2.find('input');
     var $textarea = $form2.find('textarea');
     var $submit = $form2.find('button');
-
-    var $form3 = $('#offer-form form');
-    var $inputs = $form3.find('input');
-    var $textarea = $form3.find('textarea');
-    var $submit = $form3.find('button');
+    //
+    // var $form3 = $('#offer-form form');
+    // var $inputs = $form3.find('input');
+    // var $textarea = $form3.find('textarea');
+    // var $submit = $form3.find('button');
 
 
     $inputs.validator();
