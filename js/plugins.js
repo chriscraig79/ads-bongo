@@ -49,19 +49,30 @@ $(function() {
     $.fn.validator.setDefaults({
         trigger: 'input change',
         success: function(e) {
-            //console.log(e.type, e.value, e.rule);
+            console.log(e.type, e.value, e.rule);
             $(this).closest('.form__field').removeClass('has-error').find('.help-block').empty();
         },
         error: function(e) {
-            //console.log(e.type, e.value, e.rule);
+            console.log(e.type, e.value, e.rule);
             $(this).closest('.form__field').addClass('has-error').find('.help-block').text(e.message);
         }
     });
 
-    var $form = $('.has-form form');
-    var $inputs = $form.find('input');
-    var $textarea = $form.find('textarea');
-    var $submit = $form.find(':submit');
+    var $form1 = $('#quote-form form');
+    var $inputs = $form1.find('input');
+    var $textarea = $form1.find('textarea');
+    var $submit = $form1.find('button');
+
+    var $form2 = $('#contact-form form');
+    var $inputs = $form2.find('input');
+    var $textarea = $form2.find('textarea');
+    var $submit = $form2.find('button');
+
+    var $form3 = $('#offer-form form');
+    var $inputs = $form3.find('input');
+    var $textarea = $form3.find('textarea');
+    var $submit = $form3.find('button');
+
 
     $inputs.validator();
     $textarea.validator();
