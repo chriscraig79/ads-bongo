@@ -9,37 +9,15 @@
             <section class="clear-head">
                 <div class="hero"></div>
                 <div class="container">
-                    <h1 class="w-70-tablet mx-auto text-center ani-fade">Value and expertise for Mazda Bongo owners since 2003</h1>
+                    <h1 class="w-70-tablet mx-auto text-center ani-fade">
+                        {{ site.description }}</h1>
                 </div>
             </section>
             <section>
                 <div class="container">
                     <h2 class="text-center">Services</h2>
                     <div class="w-70-tablet mx-auto">
-                        <p>
-                            Not only do we specialise in the Mazda Bongo, our garage is
-                            fully-equipped with the latest scanning diagnostic equipment and
-                            tooling to handle any vechicle, commercial or private.
-                        </p>
-                        <ul>
-                            <li>Diagnostics & Troubleshooting</li>
-                            <li>MOT & Servicing</li>
-                            <li>Air-conditioning</li>
-                            <li>Head gasket & cambelt repairs</li>
-                            <li>Exhausts</li>
-                            <li>Brakes</li>
-                            <li>Suspension</li>
-                            <li>Clutches</li>
-                            <li>Steering</li>
-                        </ul>
-                        <p>
-                            We also have a wide range of new and second hand Bongo parts available.
-                        </p>
-                        <p class="text-center">
-                            <a class="btn" href="quote.html" rel="modal:open">
-                                <b>Request a quote</b>
-                            </a>
-                        </p>
+                        {{ page.content }}
                     </div>
                 </div>
             </section>
@@ -142,8 +120,9 @@
                 </div>
             </section>
             {% include footer.html %}
-            {% include form-quote.html %}
         </div>
+        {% include form-quote.html %}
+        {% include form-offers.html offers=site.data.offers %}
         {% include scripts.html %}
     </body>
 </html>

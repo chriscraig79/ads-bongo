@@ -26,7 +26,7 @@
         <!-- logo -->
 <div class="logo linky">
     <h1 class="logo__title">
-        <a href="/index.html">Bongo Specialists</a>
+        <a href="index.html">Bongo Specialists</a>
     </h1>
     <div class="logo__sub">
         <i>by ADS Automotive</i>
@@ -41,7 +41,8 @@
             <section class="clear-head">
                 <div class="hero"></div>
                 <div class="container">
-                    <h1 class="w-70-tablet mx-auto text-center ani-fade">Value and expertise for Mazda Bongo owners since 2003</h1>
+                    <h1 class="w-70-tablet mx-auto text-center ani-fade">
+                        Value and expertise for Mazda Bongo owners since 2003</h1>
                 </div>
             </section>
             <section>
@@ -49,29 +50,30 @@
                     <h2 class="text-center">Services</h2>
                     <div class="w-70-tablet mx-auto">
                         <p>
-                            Not only do we specialise in the Mazda Bongo, our garage is
-                            fully-equipped with the latest scanning diagnostic equipment and
-                            tooling to handle any vechicle, commercial or private.
-                        </p>
-                        <ul>
-                            <li>Diagnostics & Troubleshooting</li>
-                            <li>MOT & Servicing</li>
-                            <li>Air-conditioning</li>
-                            <li>Head gasket & cambelt repairs</li>
-                            <li>Exhausts</li>
-                            <li>Brakes</li>
-                            <li>Suspension</li>
-                            <li>Clutches</li>
-                            <li>Steering</li>
-                        </ul>
-                        <p>
-                            We also have a wide range of new and second hand Bongo parts available.
-                        </p>
-                        <p class="text-center">
-                            <a class="btn" href="quote.html" rel="modal:open">
-                                <b>Request a quote</b>
-                            </a>
-                        </p>
+    Not only do we specialise in the Mazda Bongo, our garage is
+    fully-equipped with the latest scanning diagnostic equipment and
+    tooling to handle any vechicle, commercial or private.
+</p>
+<ul>
+    <li>Diagnostics & Troubleshooting</li>
+    <li>MOT & Servicing</li>
+    <li>Air-conditioning</li>
+    <li>Head gasket & cambelt repairs</li>
+    <li>Exhausts</li>
+    <li>Brakes</li>
+    <li>Suspension</li>
+    <li>Clutches</li>
+    <li>Steering</li>
+</ul>
+<p>
+    We also have a wide range of new and second hand Bongo parts available.
+</p>
+<p class="text-center">
+    <a class="btn" href="#quote-form" rel="modal:open">
+        <b>Request a quote</b>
+    </a>
+</p>
+
                     </div>
                 </div>
             </section>
@@ -233,19 +235,25 @@
                     </p>
 
                     <form class="form" action="https://formspree.io/chriscraig79@gmail.com" method="POST">
+    <div class="hidden">
+        <div class="form__field">
     <input  type="hidden" name="_next" placeholder="" value="thanks.html">
+    <p class="help-block text-left text-sm m-0"></p>
+</div>
 
+        <div class="form__field">
     <input  type="hidden" name="_subject" placeholder="" value="Contact submission!">
+    <p class="help-block text-left text-sm m-0"></p>
+</div>
 
+    </div>
     <div class="form__field">
     <input required type="text" name="name" placeholder="Name" value="">
-
     <p class="help-block text-left text-sm m-0"></p>
 </div>
 
     <div class="form__field">
     <input required type="email" name="_replyto" placeholder="Email" value="">
-
     <p class="help-block text-left text-sm m-0"></p>
 </div>
 
@@ -268,7 +276,7 @@
         <!-- logo -->
 <div class="logo linky">
     <h1 class="logo__title">
-        <a href="/index.html">Bongo Specialists</a>
+        <a href="index.html">Bongo Specialists</a>
     </h1>
     <div class="logo__sub">
         <i>by ADS Automotive</i>
@@ -287,7 +295,7 @@
                 Bristol<br />
                 BS3 2TW
             </div>
-            <a href="#">
+            <a href="https://www.facebook.com/AdsAutomotiveMazdaBongoSpecialists/"> 
                 <img src="assets/fb.png" alt="Find us on Facebook" width="100"/>
             </a>
         </div>
@@ -297,28 +305,34 @@
     </div>
 </section>
 
-            <div id="quote-form" class="modal has-form">
+        </div>
+        <div id="quote-form" class="modal has-form">
     <h2>Request a quote</h2>
     <form class="form" action="https://formspree.io/chriscraig79@gmail.com" method="POST">
-        <input  type="hidden" name="_next" placeholder="" value="thanks.html">
+        <div class="hidden">
+            <div class="form__field">
+    <input  type="hidden" name="_next" placeholder="" value="thanks.html">
+    <p class="help-block text-left text-sm m-0"></p>
+</div>
 
-        <input  type="hidden" name="_subject" placeholder="" value="New quote request">
+            <div class="form__field">
+    <input  type="hidden" name="_subject" placeholder="" value="New quote request">
+    <p class="help-block text-left text-sm m-0"></p>
+</div>
 
+        </div>
         <div class="form__field">
     <input required type="text" name="name" placeholder="Name" value="">
-
     <p class="help-block text-left text-sm m-0"></p>
 </div>
 
         <div class="form__field">
     <input required type="email" name="_replyto" placeholder="Email" value="">
-
     <p class="help-block text-left text-sm m-0"></p>
 </div>
 
         <div class="form__field">
     <input  type="text" name="reg" placeholder="Car reg number" value="">
-
     <p class="help-block text-left text-sm m-0"></p>
 </div>
 
@@ -334,7 +348,8 @@
     </form>
 </div>
 
-        </div>
+        
+
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
@@ -342,47 +357,7 @@
 <script src="js/vendor/jquery.modal.min.js"></script>
 <script src="js/vendor/datepicker.min.js"></script>
 <script src="js/vendor/validator.min.js"></script>
-<script type="text/javascript">
-    $(function() {
-        $.fn.validator.setDefaults({
-            trigger: 'input change',
-            success: function(e) {
-                console.log(e.type, e.value, e.rule);
-                $(this).closest('.form__field').removeClass('has-error').find('.help-block').empty();
-            },
-            error: function(e) {
-                console.log(e.type, e.value, e.rule);
-                $(this).closest('.form__field').addClass('has-error').find('.help-block').text(e.message);
-            }
-        });
-
-        var $form = $('.has-form form');
-        var $inputs = $form.find('input');
-        var $textarea = $form.find('textarea');
-        var $submit = $form.find(':submit');
-
-        $inputs.validator();
-        $textarea.validator();
-
-        $submit.click(function(e) {
-            var validity = [];
-
-            $inputs.each(function() {
-                validity.push($(this).validator('isValid'));
-            });
-
-            $textarea.each(function() {
-                validity.push($(this).validator('isValid'));
-            });
-
-            if ($.inArray(false, validity) !== -1) {
-                e.preventDefault();
-                return false;
-            }
-        });
-    });
-</script>
-
+<script src="js/plugins.js"></script>
 <!-- <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
     ga('create','UA-XXXX-Y','auto');ga('send','pageview')

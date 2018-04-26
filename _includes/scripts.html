@@ -5,47 +5,7 @@
 <script src="js/vendor/jquery.modal.min.js"></script>
 <script src="js/vendor/datepicker.min.js"></script>
 <script src="js/vendor/validator.min.js"></script>
-<script type="text/javascript">
-    $(function() {
-        $.fn.validator.setDefaults({
-            trigger: 'input change',
-            success: function(e) {
-                console.log(e.type, e.value, e.rule);
-                $(this).closest('.form__field').removeClass('has-error').find('.help-block').empty();
-            },
-            error: function(e) {
-                console.log(e.type, e.value, e.rule);
-                $(this).closest('.form__field').addClass('has-error').find('.help-block').text(e.message);
-            }
-        });
-
-        var $form = $('.has-form form');
-        var $inputs = $form.find('input');
-        var $textarea = $form.find('textarea');
-        var $submit = $form.find(':submit');
-
-        $inputs.validator();
-        $textarea.validator();
-
-        $submit.click(function(e) {
-            var validity = [];
-
-            $inputs.each(function() {
-                validity.push($(this).validator('isValid'));
-            });
-
-            $textarea.each(function() {
-                validity.push($(this).validator('isValid'));
-            });
-
-            if ($.inArray(false, validity) !== -1) {
-                e.preventDefault();
-                return false;
-            }
-        });
-    });
-</script>
-
+<script src="js/plugins.js"></script>
 <!-- <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
     ga('create','{{ site.ga }}','auto');ga('send','pageview')

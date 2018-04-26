@@ -1,21 +1,19 @@
-<div id="{{ page.id }}">
+<div id="{{ page.offer-id }}" class="has-form">
     <h2>{{ page.title }}</h2>
-    {% include {{ page.form }} %}
+    <form class="form" action="{{ site.formspree }}" method="POST">
+        <div class="hidden">
+            {% include form-input.html type="hidden" name="_next" value="thanks.html" %}
+            {% include form-input.html type="hidden" name="_subject" value="Offer submission!" %}
+        </div>
+        {% include form-input.html required="required" type="text" name="name" placeholder="Name" %}
+        {% include form-input.html required="required" type="email" name="_replyto" placeholder="Email" %}
+        {% include form-input.html type="text" name="reg" placeholder="Car reg number" %}
+        <input class="hidden" data-toggle="datepicker" type="text" name="date" placeholder="Select a date">
+        <div class="datepicker-wrapper mx-auto"></div>
+        <div class="form__field text-center">
+            <p class="text-center text-sm">We respect your privacy and will never share your details without your consent.</p>
+            <button class="btn" type="submit" value="Send">Submit</button>
+        </div>
+    </form>
 </div>
-<script type="text/javascript">
-
-var now = Date.now();
-var date = new Date();
-var currMonth = date.getMonth();
-var endDate = date.setMonth(currMonth + 2);
-
-$('[data-toggle="datepicker"]').datepicker({
-    format: 'dd-mm-yyyy',
-    language: 'en-GB',
-    inline: true,
-    container: '.datepicker-wrapper',
-    autoPick: true,
-    startDate: now,
-    endDate: new Date(endDate)
-});
-</script>
+<script src="js/plugins.js"></script>

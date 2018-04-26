@@ -21,4 +21,65 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
+// jQuery/helper plugins
+
+// Datepicker
+var now = Date.now();
+var date = new Date();
+var currMonth = date.getMonth();
+var endDate = date.setMonth(currMonth + 2);
+
+$('[data-toggle="datepicker"]').datepicker({
+    format: 'dd-mm-yyyy',
+    language: 'en-GB',
+    inline: true,
+    container: '.datepicker-wrapper',
+    autoPick: true,
+    startDate: now,
+    endDate: new Date(endDate),
+    filter: function(date) {
+        if (date.getDay() === 6 || date.getDay() === 0 ) {
+          return false; // Disable Saturdays & Sundays
+        }
+    }
+});
+
+// Form validator
+$(function() {
+    $.fn.validator.setDefaults({
+        trigger: 'input change',
+        success: function(e) {
+            //console.log(e.type, e.value, e.rule);
+            $(this).closest('.form__field').removeClass('has-error').find('.help-block').empty();
+        },
+        error: function(e) {
+            //console.log(e.type, e.value, e.rule);
+            $(this).closest('.form__field').addClass('has-error').find('.help-block').text(e.message);
+        }
+    });
+
+    var $form = $('.has-form form');
+    var $inputs = $form.find('input');
+    var $textarea = $form.find('textarea');
+    var $submit = $form.find(':submit');
+
+    $inputs.validator();
+    $textarea.validator();
+
+    $submit.click(function(e) {
+        var validity = [];
+
+        $inputs.each(function() {
+            validity.push($(this).validator('isValid'));
+        });
+
+        $textarea.each(function() {
+            validity.push($(this).validator('isValid'));
+        });
+
+        if ($.inArray(false, validity) !== -1) {
+            e.preventDefault();
+            return false;
+        }
+    });
+});

@@ -1,11 +1,13 @@
 <div id="quote-form" class="modal has-form">
     <h2>Request a quote</h2>
     <form class="form" action="{{ site.formspree }}" method="POST">
-        {% include form-input.html type="hidden" name="_next" value="thanks.html" %}
-        {% include form-input.html type="hidden" name="_subject" value="New quote request" %}
-        {% include form-field.html required="required" type="text" name="name" placeholder="Name" %}
-        {% include form-field.html required="required" type="email" name="_replyto" placeholder="Email" %}
-        {% include form-field.html type="text" name="reg" placeholder="Car reg number" %}
+        <div class="hidden">
+            {% include form-input.html type="hidden" name="_next" value="thanks.html" %}
+            {% include form-input.html type="hidden" name="_subject" value="New quote request" %}
+        </div>
+        {% include form-input.html required="required" type="text" name="name" placeholder="Name" %}
+        {% include form-input.html required="required" type="email" name="_replyto" placeholder="Email" %}
+        {% include form-input.html type="text" name="reg" placeholder="Car reg number" %}
         {% include form-textarea.html required="required" name="message" rows="4" cols="60" placeholder="How can we help?" %}
         <div class="form__field text-center">
             <p class="text-center text-sm">We respect your privacy and will never share your details without your consent.</p>
