@@ -1,0 +1,11 @@
+{% for service in include.services %}
+<div class="col card">
+    <h3 class="m-0">
+        {{ service.title }}
+    </h3>
+    <p class="m-0 text-sm">
+        <b>{{ service.sub }}</b>
+    </p>
+    <p class="mt-0">{{ service.description }}</p>
+</div>
+{% endfor %}

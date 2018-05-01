@@ -31,25 +31,27 @@ section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
 
   .col {
     flex: 1;
+    margin: 1rem;
   }
 
-  &.-profile {
-
-
-      .col {
-          flex: 0 0 50%;
-          max-width: 50%;
-
-          @include media('>tablet') {
-              flex: 0 0 33.333333%;
-              max-width: 33.333333%;
-          }
-
-      }
-  }
+  // &.-profile {
+  //
+  //     .col {
+  //         flex: 0 0 50%;
+  //         max-width: 50%;
+  //
+  //         @include media('>tablet') {
+  //             flex: 0 0 33.333333%;
+  //             max-width: 33.333333%;
+  //         }
+  //
+  //     }
+  // }
 
 
 }

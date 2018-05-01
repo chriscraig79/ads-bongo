@@ -5,22 +5,33 @@
         {% include upgrade.html %}
         <div id="main">
             {% include header.html %}
-            <!-- Content -->
+            <!-- Hero -->
             <section class="clear-head">
                 <div class="hero"></div>
                 <div class="container">
-                    <h1 class="w-70-tablet mx-auto text-center ani-fade">
-                        {{ site.description }}</h1>
+                    <h1 class="w-70-tablet mx-auto text-center">{{ site.description }}</h1>
                 </div>
             </section>
+            <!-- Services -->
             <section>
                 <div class="container">
                     <h2 class="text-center">Our Services</h2>
                     <div class="w-70-tablet mx-auto">
-                        {{ page.content }}
+                        <p>
+                            {{ page.seriveIntro }}
+                        </p>
+                        <div class="grid">
+                            {% include service.html services=site.data.services %}
+                        </div>
+                        <p class="text-center">
+                            <a class="btn" href="#quote-form" rel="modal:open">
+                                <b>Request a quote</b>
+                            </a>
+                        </p>
                     </div>
                 </div>
             </section>
+            <!-- Testimonals -->
             <section>
                 <div class="container">
                     <h2 class="text-center">Client testimonals</h2>
@@ -30,6 +41,7 @@
 
                 </div>
             </section>
+            <!-- Offers -->
             <section class="bg-pale">
                 <div class="container">
                     <h2 class="text-center">Special Offers</h2>
@@ -38,17 +50,21 @@
                     </div>
                 </div>
             </section>
+            <!-- Team -->
             <section>
                 <div class="container">
                     <h2 class="text-center">Meet the team</h2>
-                    <p class="w-75-tablet mx-auto">
-                        {{ page.teamIntro }}
-                    </p>
-                    <div class="grid -profile">
-                        {% include profile.html profiles=site.data.profiles %}
+                    <div class="w-75-tablet mx-auto">
+                        <p>
+                            {{ page.teamIntro }}
+                        </p>
+                        <div class="grid">
+                            {% include profile.html profiles=site.data.profiles %}
+                        </div>
                     </div>
                 </div>
             </section>
+            <!-- Find us -->
             <section>
                 <div class="container">
                     <h2 class="text-center">Find us</h2>
@@ -58,6 +74,7 @@
                     <p class="text-center"><a href="https://www.google.com/maps?ll=51.428698,-2.628791&z=16&t=m&hl=en-GB&gl=GB&mapclient=embed&cid=8151335122209046245">Open in Google Maps</a></p>
                 </div>
             </section>
+            <!-- Contact -->
             <section class="bg-pale">
                 <div class="container text-center w-50-tablet">
                     <h2>Contact us</h2>
