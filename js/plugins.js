@@ -58,39 +58,34 @@ $(function() {
         }
     });
 
-    // var $form1 = $('#quote-form form');
-    // var $inputs = $form1.find('input');
-    // var $textarea = $form1.find('textarea');
-    // var $submit = $form1.find('button');
+    var $form = $('.has-form form');
 
-    var $form2 = $('#contact-form form');
-    var $inputs = $form2.find('input');
-    var $textarea = $form2.find('textarea');
-    var $submit = $form2.find('button');
-    //
-    // var $form3 = $('#offer-form form');
-    // var $inputs = $form3.find('input');
-    // var $textarea = $form3.find('textarea');
-    // var $submit = $form3.find('button');
+    $.each($form, function() {
+        var $form = $(this);
+        var $inputs = $form.find('input');
+        var $textarea = $form.find('textarea');
+        var $submit = $form.find('button');
 
+        $inputs.validator();
+        $textarea.validator();
 
-    $inputs.validator();
-    $textarea.validator();
+        $submit.click(function(e) {
+            var validity = [];
 
-    $submit.click(function(e) {
-        var validity = [];
+            $inputs.each(function() {
+                validity.push($(this).validator('isValid'));
+            });
 
-        $inputs.each(function() {
-            validity.push($(this).validator('isValid'));
+            $textarea.each(function() {
+                validity.push($(this).validator('isValid'));
+            });
+
+            if ($.inArray(false, validity) !== -1) {
+                e.preventDefault();
+                return false;
+            }
         });
-
-        $textarea.each(function() {
-            validity.push($(this).validator('isValid'));
-        });
-
-        if ($.inArray(false, validity) !== -1) {
-            e.preventDefault();
-            return false;
-        }
     });
+
+
 });
