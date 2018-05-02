@@ -21,7 +21,7 @@
                         <div class="grid">
                             {% include service.html services=site.data.services %}
                         </div>
-                        <p class="text-center">
+                        <p class="text-center my-3">
                             <a class="btn" href="quote.html" rel="modal:open">
                                 <b>Request a quote</b>
                             </a>
@@ -71,13 +71,15 @@
             </section>
             <!-- Contact -->
             <section class="bg-pale">
-                <div class="container text-center w-50-tablet">
-                    <h2>Contact us</h2>
-                    <p>{{ page.contactIntro }}</p>
-                    <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
-                    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-                    <div id="contact-form" class="has-form">
-                        {% include form.html %}
+                <div class="container">
+                    <div class="mx-auto text-center w-50-tablet">
+                        <h2>Contact us</h2>
+                        <p>{{ page.contactIntro }}</p>
+                        <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+                        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                        <div id="contact-form" class="has-form">
+                            {% include form.html %}
+                        </div>
                     </div>
                 </div>
             </section>

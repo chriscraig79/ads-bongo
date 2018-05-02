@@ -18,7 +18,10 @@ header {
 .clear-head {
     border-top: 0;
     padding-top: 67px;
-    padding-bottom: 0;
+
+    h1 {
+        margin-bottom: 0;
+    }
 
 }
 
