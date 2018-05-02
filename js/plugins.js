@@ -21,7 +21,16 @@
     }
 }());
 
-// jQuery/helper plugins
+// TODO Set Quote Selection in modal from link
+
+// Read value from link attribute (probabaly use data attribute?)
+// Match correct value from select options (loop through select options, how get select option values?)
+// Set selected on matching option (add selected atribute to option)
+
+// var selectElement = $('#quote-option');
+// var selectValue = 'Please select option';
+
+// XXX jQuery plugins
 
 // Datepicker
 var now = Date.now();
@@ -30,11 +39,11 @@ var currMonth = date.getMonth();
 var endDate = date.setMonth(currMonth + 2);
 
 $('[data-toggle="datepicker"]').datepicker({
-    format: 'dd-mm-yyyy',
+    format: 'dd / mm / yyyy',
     language: 'en-GB',
     inline: true,
     container: '.datepicker-wrapper',
-    autoPick: true,
+    // autoPick: true,
     startDate: now,
     endDate: new Date(endDate),
     filter: function(date) {
@@ -86,6 +95,4 @@ $(function() {
             }
         });
     });
-
-
 });

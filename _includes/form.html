@@ -1,0 +1,23 @@
+<form class="form" action="{{ site.formspree }}" method="POST">
+    <input type="hidden" name="_next" value="thanks.html">
+    <input type="hidden" name="_subject" value="{{ page.email-subject }}">
+    <input type="hidden" name="Enquiry " value="{{ page.title }}">
+    {% include form-field-input.html required="required" type="text" name="Name" placeholder="Name (required)" %}
+    {% include form-field-input.html required="required" type="email" name="_replyto" placeholder="Email (required)" %}
+    {% if page.form-reg %}
+       {% include form-field-input.html type="text" name="Car reg" placeholder="Car reg number" %}
+    {% endif %}
+    {% if page.form-datepicker %}
+        {% include form-field-datepicker.html %}
+    {% endif %}
+    {% if page.form-select %}
+        {% include form-field-select.html %}
+    {% endif%}
+    {% if page.form-textarea %}
+        {% include form-field-textarea.html name="Message" rows="4" cols="60" placeholder="How can we help?" %}
+    {% endif %}
+    <div class="form__field text-center">
+        <p class="text-center text-sm">We respect your privacy and will never share your details without your consent.</p>
+        <button class="btn" type="submit" value="Send">Submit</button>
+    </div>
+</form>

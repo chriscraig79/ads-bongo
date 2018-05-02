@@ -136,7 +136,7 @@
     &:before {
         content:'';
         position: absolute;
-        top: ($base-line-height + $dropdown-arrow-size) / 4;
+        top: ($base-line-height + $dropdown-arrow-size) / 2;
         right: $base-font-size;
         display: inline-block;
         border-top: 1px solid $colour-base;

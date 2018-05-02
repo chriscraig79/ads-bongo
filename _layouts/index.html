@@ -17,14 +17,12 @@
                 <div class="container">
                     <h2 class="text-center">Our Services</h2>
                     <div class="w-75-tablet mx-auto">
-                        <p>
-                            {{ page.seriveIntro }}
-                        </p>
+                        <p>{{ page.seriveIntro }}</p>
                         <div class="grid">
                             {% include service.html services=site.data.services %}
                         </div>
                         <p class="text-center">
-                            <a class="btn" href="#quote-form" rel="modal:open">
+                            <a class="btn" href="quote.html" rel="modal:open">
                                 <b>Request a quote</b>
                             </a>
                         </p>
@@ -38,7 +36,6 @@
                     <div class="w-70-tablet mx-auto">
                         {% include testimonal.html testimonals=site.data.testimonals %}
                     </div>
-
                 </div>
             </section>
             <!-- Offers -->
@@ -55,9 +52,7 @@
                 <div class="container">
                     <h2 class="text-center">Meet the team</h2>
                     <div class="w-75-tablet mx-auto">
-                        <p>
-                            {{ page.teamIntro }}
-                        </p>
+                        <p>{{ page.teamIntro }}</p>
                         <div class="grid">
                             {% include profile.html profiles=site.data.profiles %}
                         </div>
@@ -78,23 +73,16 @@
             <section class="bg-pale">
                 <div class="container text-center w-50-tablet">
                     <h2>Contact us</h2>
-                    <p>
-                        {{ page.contactIntro }}
-                    </p>
-                    <p>
-                        <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
-                    </p>
-                    <p>
-                        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-                    </p>
+                    <p>{{ page.contactIntro }}</p>
+                    <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+                    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
                     <div id="contact-form" class="has-form">
-                        {% include {{ page.form }} %}
+                        {% include form.html %}
                     </div>
                 </div>
             </section>
             {% include footer.html %}
         </div>
-        {% include form-quote.html %}
         {% include scripts.html %}
     </body>
 </html>
