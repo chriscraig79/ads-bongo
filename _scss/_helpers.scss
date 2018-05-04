@@ -169,33 +169,22 @@
             left: 0;
         }
     }
-
 }
-
-// .fadeInDown {
-//     animation-name: fadeInDown;
-// }
-//
-// .animated {
-//     animation-duration: 50s;
-//     animation-fill-mode: both;
-// }
-
-
 
 .slidein {
     position: relative;
     animation-name: slidein;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
     animation-timing-function: ease;
+    animation-fill-mode: both;
     z-index: -1;
 }
 
 @keyframes slidein {
   from {
       opacity: 0;
-      transform: translate3d(0,100vh,0);
+      transform: translate3d(0,1000px,0);
   }
 
   to {
