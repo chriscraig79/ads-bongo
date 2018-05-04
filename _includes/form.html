@@ -11,7 +11,7 @@
         {% include form-field-datepicker.html %}
     {% endif %}
     {% if page.form-select %}
-        {% include form-field-select.html %}
+        {% include form-field-select.html name="Service" default="Select a service (optional)" %}
     {% endif%}
     {% if page.form-textarea %}
         {% include form-field-textarea.html name="Message" rows="4" cols="60" placeholder="How can we help?" %}

@@ -19,18 +19,6 @@
     }
 }
 
-// hero
-
-.hero {
-    background: url(../assets/hero-bg.jpg) top no-repeat;
-    background-size: cover;
-    padding-top: 50%;
-
-    @include media(">tablet") {
-        padding-top: 30%;
-    }
-}
-
 // cards
 
 .card {

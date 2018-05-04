@@ -1,8 +1,17 @@
 // layout
+#main {
+    background: url(../assets/hero-bg.jpg) 0 70px no-repeat;
+    background-size: 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
 .container {
     padding: 0 1.33rem;
 
-    @include media(">tablet") {
+    @include media(">desktop") {
         max-width: $container-max-width;
         margin: 0 auto;
     }
@@ -17,7 +26,12 @@ header {
 
 .clear-head {
     border-top: 0;
-    padding-top: 67px;
+    margin-top: 50%;
+    overflow: auto; // prevent H1 margin colapse
+
+    @include media(">tablet") {
+        margin-top: 30%;
+    }
 
     h1 {
         margin-bottom: 0;
@@ -28,6 +42,7 @@ header {
 section {
     border-top: 1px solid $border-color;
     padding-bottom: 3.2rem;
+    background-color: #fff;
 }
 
 .grid  {
@@ -41,24 +56,7 @@ section {
     flex: 1;
     margin: 1rem;
   }
-
-  // &.-profile {
-  //
-  //     .col {
-  //         flex: 0 0 50%;
-  //         max-width: 50%;
-  //
-  //         @include media('>tablet') {
-  //             flex: 0 0 33.333333%;
-  //             max-width: 33.333333%;
-  //         }
-  //
-  //     }
-  // }
-
-
 }
-
 
 .row {
     display: flex;

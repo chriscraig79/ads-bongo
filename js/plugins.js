@@ -21,14 +21,13 @@
     }
 }());
 
-// TODO Set Quote Selection in modal from link
+// TODO Add 'selected' to select option from link that opens modal
 
-// Read value from link attribute (probabaly use data attribute?)
-// Match correct value from select options (loop through select options, how get select option values?)
-// Set selected on matching option (add selected atribute to option)
-
-// var selectElement = $('#quote-option');
-// var selectValue = 'Please select option';
+// Add data attribute to all links that trigger modal
+// On click, get value from link attribute (probabaly use array index?)
+// Pass select options into an array
+// forLoop select options array
+// Add selected to select option
 
 // XXX jQuery plugins
 

@@ -1,6 +1,6 @@
 <div class="form__field has-dropdown has-arrow -down">
-    <select id="quote-option" name="Service" data-component="dropdown">
-        <option value="" selected>Select a service</option>
+    <select name="{{ include.name }}" data-component="dropdown">
+        <option value="" selected>{{ include.default }}</option>
         {% include form-option-service.html services=site.data.services %}
     </select>
 </div>
