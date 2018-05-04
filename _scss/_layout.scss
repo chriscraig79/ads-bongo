@@ -41,7 +41,7 @@ header {
 .clear-header {
     border-top: 0;
     margin-top: 70px;
-    overflow: auto; // prevent H1 margin colapse
+    overflow: hidden; // prevent H1 margin colapse
 
     h1 {
         margin-bottom: 0;
