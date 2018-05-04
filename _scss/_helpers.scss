@@ -192,3 +192,35 @@
       transform: none;
   }
 }
+
+.slideleft {
+    position: relative;
+    animation-name: slideleft;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes slideleft {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+
+  60% {
+      opacity: 1;
+      transform: none;
+  }
+
+  90% {
+      opacity: 1;
+      transform: none;
+  }
+
+  100% {
+        opacity: 0;
+        transform: translateX(100%);
+  }
+}
