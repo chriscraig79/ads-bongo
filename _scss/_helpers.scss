@@ -193,9 +193,9 @@
   }
 }
 
-.slideleft {
+.ani-bongo {
     position: relative;
-    animation-name: slideleft;
+    animation-name: bongo;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-delay: 0.2s;
@@ -203,7 +203,7 @@
     animation-fill-mode: both;
 }
 
-@keyframes slideleft {
+@keyframes bongo {
   0% {
       opacity: 0;
       transform: translateX(-100%);
