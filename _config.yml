@@ -19,9 +19,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Value and expertise for Mazda Bongo owners since 2003
 baseurl: "/ads-bongo" # the subpath of your site, e.g. /blog
 url: "https://chriscraig79.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-formspree: https://formspree.io/chriscraig79@gmail.com
-phone: 0117 635 999
-ga: UA-XXXX-Y
+formspree: https://formspree.io/info@bongospecialists.co.uk
+phone: 0117 9635 999
+ga: UA-123677328-1
 facebook: https://www.facebook.com/AdsAutomotiveMazdaBongoSpecialists/
 
 # Build settings
