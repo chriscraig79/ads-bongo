@@ -3,3 +3,6 @@
 # Allow crawling of all content
 User-agent: *
 Disallow: /thanks.html
+Disallow: /offer-1.html
+Disallow: /offer-2.html
+Disallow: /quote.html
